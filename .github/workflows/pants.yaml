@@ -18,9 +18,5 @@ jobs:
         with:
           gha-cache-key: cache0-py${{ matrix.python_version }}
           named-caches-hash: ${{ hashFiles('lockfiles/*.json') }}
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
       - name: Check BUILD files
         run: "./pants tailor --check ::"
