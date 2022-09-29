@@ -13,7 +13,7 @@ backend_packages = [
 use_deprecated_directory_cli_args_semantics = false
 
 [source]
-marker_filenames = ["pyproject.toml"]
+root_patterns = ["/packages/*"]
 
 [anonymous-telemetry]
 enabled = true
