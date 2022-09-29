@@ -1,2 +1,5 @@
 [GLOBAL]
 pants_version = "2.13.0"
+
+[source]
+root_patterns = ["/packages/*/src", "/packages/*/tests"]
