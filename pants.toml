@@ -11,6 +11,7 @@ backend_packages = [
     "pants.backend.awslambda.python",
 ]
 use_deprecated_directory_cli_args_semantics = false
+use_deprecated_pex_binary_run_semantics = false
 
 [source]
 root_patterns = ["/packages/*/src", "/packages/*/tests"]
