@@ -13,7 +13,7 @@ backend_packages = [
 use_deprecated_directory_cli_args_semantics = false
 
 [source]
-root_patterns = ["/packages/*"]
+root_patterns = ["/packages/*/src", "/packages/*/tests"]
 
 [anonymous-telemetry]
 enabled = true

@@ -1,4 +1,4 @@
-from . import hello
+from libhello import hello
 
 
 def test_hello():
