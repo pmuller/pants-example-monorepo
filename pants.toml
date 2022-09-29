@@ -14,3 +14,6 @@ use_deprecated_directory_cli_args_semantics = false
 
 [source]
 marker_filenames = ["pyproject.toml"]
+
+[anonymous-telemetry]
+enabled = true
