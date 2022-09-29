@@ -17,6 +17,7 @@ marker_filenames = ["pyproject.toml"]
 
 [anonymous-telemetry]
 enabled = true
+repo_id = "02a6ed9b-169f-4935-aeee-7cb9d1b5716f"
 
 [python]
 tailor_pex_binary_targets = false
