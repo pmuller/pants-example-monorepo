@@ -1,5 +1,15 @@
 [GLOBAL]
 pants_version = "2.13.0"
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.python.lint.black",
+    "pants.backend.python.lint.docformatter",
+    "pants.backend.python.lint.flake8",
+    "pants.backend.python.lint.isort",
+    "pants.backend.python.lint.pylint",
+    "pants.backend.python.typecheck.mypy",
+    "pants.backend.awslambda.python",
+]
 
 [source]
 root_patterns = ["/packages/*/src", "/packages/*/tests"]
