@@ -17,3 +17,6 @@ marker_filenames = ["pyproject.toml"]
 
 [anonymous-telemetry]
 enabled = true
+
+[python]
+tailor_pex_binary_targets = false
