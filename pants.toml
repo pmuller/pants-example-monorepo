@@ -12,4 +12,4 @@ backend_packages = [
 ]
 
 [source]
-root_patterns = ["/packages/*/src", "/packages/*/tests"]
+marker_filenames = ["pyproject.toml"]
