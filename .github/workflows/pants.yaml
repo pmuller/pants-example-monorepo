@@ -1,0 +1,26 @@
+name: Pants
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  checks:
+    name: Run checks
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Initialize Pants
+        uses: pantsbuild/actions/init-pants@main
+        with:
+          gha-cache-key: cache0-py${{ matrix.python_version }}
+          named-caches-hash: ${{ hashFiles('lockfiles/*.json') }}
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check BUILD files
+        run: "./pants tailor --check ::"
