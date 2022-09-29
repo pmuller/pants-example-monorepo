@@ -10,6 +10,7 @@ backend_packages = [
     "pants.backend.python.typecheck.mypy",
     "pants.backend.awslambda.python",
 ]
+use_deprecated_directory_cli_args_semantics = false
 
 [source]
 marker_filenames = ["pyproject.toml"]
