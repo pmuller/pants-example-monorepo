@@ -2,6 +2,14 @@
 
 This is a sample Python monorepo I use to learn how to use Pants.
 
+## Update .env
+
+Must be ran every time a new root is added.
+
+```shell
+echo PYTHONPATH=$(./pants roots | tr '\n' :)\$PYTHONPATH > .env
+```
+
 ## Update requirements lock file
 
 ```shell
