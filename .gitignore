@@ -2,3 +2,8 @@
 /.pants.*
 /dist/
 /.pids
+
+# VSCode
+# XXX: Not great, we'll live with it for now as we cannot predict the Pants
+# virtualenv Python interpreter path
+/.vscode/settings.json
