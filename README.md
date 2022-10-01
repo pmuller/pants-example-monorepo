@@ -27,11 +27,23 @@ Wrote virtualenv for the tool 'mypy' to dist/export/python/virtualenvs/tools
 ## Configure VSCode to use the python-default virtualenv
 
 ```shell
-DEFAULT_VENV_PATH=$(echo ./dist/export/python/virtualenvs/python-default/*/bin/python | head -1)
 mkdir -p .vscode
 VSCODE_SETTINGS_PATH=.vscode/settings.json
+DEFAULT_INTERPRETER_PATH=$(echo ./dist/export/python/virtualenvs/python-default/*/bin/python | head -1)
 [ -f $VSCODE_SETTINGS_PATH ] || echo '{}' > $VSCODE_SETTINGS_PATH
-jq ".\"python.defaultInterpreterPath\" = \"$DEFAULT_VENV_PATH\"" $VSCODE_SETTINGS_PATH | sponge $VSCODE_SETTINGS_PATH
+jq --arg pythonInterpreterPath $DEFAULT_INTERPRETER_PATH '
+    ."python.defaultInterpreterPath" = "'$DEFAULT_VENV_PATH'" |
+    ."python.formatting.provider" = "black" |
+    ."python.formatting.blackPath" = "./dist/export/python/virtualenvs/tools/black/bin/black" |
+    ."python.sortImpots.path" = "./dist/export/python/virtualenvs/tools/isort/bin/isort" |
+    ."python.linting.flake8Enabled" = true |
+    ."python.linting.flake8Path" = "./dist/export/python/virtualenvs/tools/flake8/bin/flake8" |
+    ."python.linting.flake8Enabled" = true |
+    ."python.linting.pylintPath" = "./dist/export/python/virtualenvs/tools/pylint/bin/pylint" |
+    ."python.linting.pylintEnabled" = true |
+    ."python.linting.mypyPath" = "./dist/export/python/virtualenvs/tools/mypy/bin/mypy" |
+    ."python.linting.mypyEnabled" = true
+' $VSCODE_SETTINGS_PATH | sponge $VSCODE_SETTINGS_PATH
 ```
 
 ## Update requirements lock file
