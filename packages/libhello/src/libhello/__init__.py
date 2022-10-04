@@ -1,1 +1,3 @@
-from .hello import hello
+"""libhello package.
+"""
+from .hello import hello  # noqa: F401
