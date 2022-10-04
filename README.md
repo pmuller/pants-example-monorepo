@@ -30,3 +30,9 @@ $ ./pants generate-lockfiles
 ```shell
 ./pants test ::
 ```
+
+## Run linters
+
+```shell
+./pants lint ::
+```
