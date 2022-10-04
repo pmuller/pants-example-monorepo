@@ -13,6 +13,10 @@ Generating .env file...
 Generating .vscode/settings.json file...
 ```
 
+Configuration validated with VSCode.
+
+TODO: Check if it also works in vim with [dotenv.vim](https://github.com/tpope/vim-dotenv).
+
 ## Update requirements lock file
 
 Must be ran every time a dependency is added/modified/removed.
