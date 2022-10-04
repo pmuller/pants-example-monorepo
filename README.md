@@ -4,7 +4,7 @@ This is a sample Python monorepo I use to learn how to use Pants.
 
 ## Generate IDE configuration
 
-Must be ran every time a new root is added.
+Must be ran every time a new package is added.
 
 ```shell
 $ ./scripts/setup-pants-ide-env.sh
@@ -14,6 +14,8 @@ Generating .vscode/settings.json file...
 ```
 
 ## Update requirements lock file
+
+Must be ran every time a dependency is added/modified/removed.
 
 ```shell
 $ ./pants generate-lockfiles
