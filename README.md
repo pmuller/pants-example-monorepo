@@ -40,3 +40,9 @@ $ ./pants generate-lockfiles
 ```shell
 ./pants lint ::
 ```
+
+## Run type checker
+
+```shell
+./pants check ::
+```
