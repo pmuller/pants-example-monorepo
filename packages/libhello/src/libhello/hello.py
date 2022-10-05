@@ -1,5 +1,5 @@
 """libhello implementation."""
-from colorama import Style, Fore
+from colorama import Fore, Style
 
 
 def hello(name: str) -> str:
