@@ -52,3 +52,16 @@ $ ./pants generate-lockfiles
 ```shell
 ./pants repl ::
 ```
+
+## Build packages
+
+```shell
+./pants package ::
+```
+
+### Run bundled CLI package
+
+```shell
+$ ./dist/packages.hello.src.hello/hello.pex foo
+Hello foo
+```
