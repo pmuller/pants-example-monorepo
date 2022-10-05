@@ -9,7 +9,8 @@
 //     "CPython<4,>=3.9"
 //   ],
 //   "generated_with_requirements": [
-//     "colorama"
+//     "colorama",
+//     "types-colorama"
 //   ]
 // }
 // --- END PANTS LOCKFILE METADATA ---
@@ -40,6 +41,24 @@
           "requires_dists": [],
           "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7",
           "version": "0.4.5"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "9cdc88dcde9e8ebafb2fdfaf5cee260452f93e5c57eb5d8b2a7f65b836d4e5d0",
+              "url": "https://files.pythonhosted.org/packages/5a/fe/1b6c498866c3cccdb82cb8848b9c02dd90fc730347463ed3993c0c87d387/types_colorama-0.4.15-py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "fd128b1e32f3fecec5f09df4366d21498ee86ea31fcf8b4e8f1ade6d0bbf9832",
+              "url": "https://files.pythonhosted.org/packages/c1/39/3c27832cb9fbff4e980d5994f8ee0147dbf5408b8b02c902b46d4a3cacc2/types-colorama-0.4.15.tar.gz"
+            }
+          ],
+          "project_name": "types-colorama",
+          "requires_dists": [],
+          "requires_python": null,
+          "version": "0.4.15"
         }
       ],
       "platform_tag": null
@@ -49,7 +68,8 @@
   "pex_version": "2.1.102",
   "prefer_older_binary": false,
   "requirements": [
-    "colorama"
+    "colorama",
+    "types-colorama"
   ],
   "requires_python": [
     "<4,>=3.9"
