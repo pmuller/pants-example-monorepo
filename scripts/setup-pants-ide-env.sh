@@ -62,5 +62,7 @@ jq -r --arg defaultInterpreterPath $DEFAULT_INTERPRETER_PATH '
     ."python.formatting.provider" = "black" |
     ."python.linting.flake8Enabled" = true |
     ."python.linting.pylintEnabled" = true |
-    ."python.linting.mypyEnabled" = true
+    ."python.linting.mypyEnabled" = true |
+    ."[python]"."editor.formatOnSave" = true |
+    ."[python]"."editor.codeActionsOnSave"."source.organizeImports" = true
 ' $VSCODE_SETTINGS_PATH | sponge $VSCODE_SETTINGS_PATH
