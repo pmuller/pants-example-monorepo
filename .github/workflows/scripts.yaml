@@ -1,0 +1,20 @@
+name: scripts
+
+on:
+  push:
+    paths:
+      - .github/workflows/scripts.yaml
+      - scripts/**
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Initialize Pants
+        uses: pantsbuild/actions/init-pants@main
+        with:
+          named-caches-hash: ${{ hashFiles('lockfiles/*.json') }}
+      - name: Run linters
+        run: "./pants check scripts::"

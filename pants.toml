@@ -8,12 +8,15 @@ backend_packages = [
     "pants.backend.python.lint.pylint",
     "pants.backend.python.typecheck.mypy",
     "pants.backend.awslambda.python",
+    "pants.backend.shell",
+    "pants.backend.shell.lint.shfmt",
+    "pants.backend.shell.lint.shellcheck",
 ]
 use_deprecated_directory_cli_args_semantics = false
 use_deprecated_pex_binary_run_semantics = false
 
 [source]
-root_patterns = ["/packages/*/src", "/packages/*/tests"]
+root_patterns = ["/packages/*/src", "/packages/*/tests", "/scripts"]
 
 [anonymous-telemetry]
 enabled = true
