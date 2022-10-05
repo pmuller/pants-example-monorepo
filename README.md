@@ -46,3 +46,9 @@ $ ./pants generate-lockfiles
 ```shell
 ./pants check ::
 ```
+
+## Run REPL
+
+```shell
+./pants repl ::
+```
