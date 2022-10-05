@@ -23,3 +23,6 @@ repo_id = "02a6ed9b-169f-4935-aeee-7cb9d1b5716f"
 tailor_pex_binary_targets = false
 enable_resolves = true
 interpreter_constraints = ["CPython<4,>=3.9"]
+
+[repl]
+shell = "ipython"
