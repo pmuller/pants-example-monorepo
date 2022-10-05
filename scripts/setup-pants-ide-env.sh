@@ -56,7 +56,7 @@ mkdir -p .vscode
 VSCODE_SETTINGS_PATH=.vscode/settings.json
 echo "Generating $VSCODE_SETTINGS_PATH file..."
 DEFAULT_INTERPRETER_PATH=$(head -1 $VENV_PATHS)/bin/python
-[ -f $VSCODE_SETTINGS_PATH ] || echo '{}' > $VSCODE_SETTINGS_PATH
+[ -f $VSCODE_SETTINGS_PATH ] || echo '{}' >$VSCODE_SETTINGS_PATH
 jq -r --arg defaultInterpreterPath $DEFAULT_INTERPRETER_PATH '
     ."python.defaultInterpreterPath" = $defaultInterpreterPath |
     ."python.formatting.provider" = "black" |
