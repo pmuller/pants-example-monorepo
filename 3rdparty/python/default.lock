@@ -9,6 +9,7 @@
 //     "CPython<4,>=3.9"
 //   ],
 //   "generated_with_requirements": [
+//     "aws-lambda-typing",
 //     "colorama",
 //     "types-colorama"
 //   ]
@@ -24,6 +25,26 @@
   "locked_resolves": [
     {
       "locked_requirements": [
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "0b9028652fb7f71cd7624d46f1ba9b7685279793793c54872aa502892a2b23c4",
+              "url": "https://files.pythonhosted.org/packages/8c/35/fd95dc2a65b62dcb0d7a6757f5ce5c2d9842a9a9295664168d386e9e5936/aws_lambda_typing-2.16.0-py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "723341cc225dff0f09de57420692a2de895cf9d637d553f6f874339e4502e24f",
+              "url": "https://files.pythonhosted.org/packages/4c/ba/71f7850eccd72e6e9ef80ea5e0166720db969acc7993a105bf6af2401c80/aws-lambda-typing-2.16.0.tar.gz"
+            }
+          ],
+          "project_name": "aws-lambda-typing",
+          "requires_dists": [
+            "typing-extensions<5.0.0,>=4.1.1; python_version < \"3.8\""
+          ],
+          "requires_python": "<4.0,>=3.6",
+          "version": "2.16"
+        },
         {
           "artifacts": [
             {
@@ -68,6 +89,7 @@
   "pex_version": "2.1.102",
   "prefer_older_binary": false,
   "requirements": [
+    "aws-lambda-typing",
     "colorama",
     "types-colorama"
   ],
